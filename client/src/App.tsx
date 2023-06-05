@@ -5,8 +5,11 @@ import LoginPage from './components/sites/LoginPage'
 import Dashboard from './components/sites/Dashboard'
 import Page404 from './components/sites/Page404'
 
+import { Provider } from 'react-redux'
+import store from './functions/reduxStore'
+
 const App = () => {
-  return <>
+  return <Provider store={store}>
 
     {/* App router: */}
     <Routes>
@@ -27,7 +30,7 @@ const App = () => {
       {/* Login form page: */}
       <Route path='/login' element={<LoginPage />} />
     </Routes>
-  </>
+  </Provider>
 }
 
 export default App
