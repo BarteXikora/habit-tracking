@@ -1,6 +1,10 @@
 import { Routes, Route, Navigate } from 'react-router-dom'
 import ProtectedRoutes from './functions/ProtectedRoutes'
 
+import LoginPage from './components/sites/LoginPage'
+import Dashboard from './components/sites/Dashboard'
+import Page404 from './components/sites/Page404'
+
 const App = () => {
   return <>
 
@@ -14,14 +18,14 @@ const App = () => {
         <Route path='/' element={<Navigate to={'/dashboard'} />} />
 
         {/* Dashboard page: */}
-        <Route path='/dashboard' element={<h1>Hello, World!</h1>} />
+        <Route path='/dashboard' element={<Dashboard />} />
 
         {/* Handles 404: */}
-        <Route path='*' element={<h1>404</h1>} />
+        <Route path='*' element={<Page404 />} />
       </Route>
 
       {/* Login form page: */}
-      <Route path='/login' element={null} />
+      <Route path='/login' element={<LoginPage />} />
     </Routes>
   </>
 }
