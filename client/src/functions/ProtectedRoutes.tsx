@@ -1,10 +1,11 @@
 import { Outlet, Navigate } from 'react-router-dom'
+import { useAppSelector } from './reduxStore'
 
 const ProtectedRoutes = () => {
-    const __log: boolean = false
+    const isLoggedIn: boolean = useAppSelector((state) => state.user.isLoggedIn)
 
     // Redirect to login page if user not logged in:
-    if (!__log) return <Navigate to={'/login'} />
+    if (!isLoggedIn) return <Navigate to={'/login'} />
 
     return <Outlet />
 }
