@@ -1,0 +1,11 @@
+.navbar {
+    background-color: $black;
+    color: $white;
+}
+
+.navbar-brand {
+    font-family: $font-title;
+    font-size: $f-subtitle;
+    color: $white;
+    pointer-events: none;
+}
