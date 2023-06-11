@@ -1,4 +1,5 @@
 import { Navbar, Container } from 'react-bootstrap'
+import UserButton from './UserButton'
 
 import imgLogo from '../../img/logo.png'
 
@@ -10,6 +11,8 @@ const AppNavbar = () => {
 
                 <span>goodhabit</span>
             </Navbar.Brand>
+
+            <UserButton />
         </Container>
     </Navbar>
 }

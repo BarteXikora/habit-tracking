@@ -1,0 +1,28 @@
+.btn,
+button {
+    border: none;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+}
+
+.btn-tr {
+    background-color: transparent;
+
+    &:active,
+    &:hover {
+        background-color: $courtain-gray !important;
+    }
+}
+
+// User button:
+.icon-user {
+    background-color: $gray;
+    border-radius: $radius;
+
+    img {
+        width: 35px;
+    }
+}

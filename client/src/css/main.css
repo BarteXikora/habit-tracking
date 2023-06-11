@@ -4,13 +4,13 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f3f9ff;
-  color: #002229;
+  color: #001B29;
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
 }
 
 .navbar {
-  background-color: #002229;
+  background-color: #001B29;
   color: #f3f9ff;
 }
 
@@ -19,4 +19,33 @@ body {
   font-size: 24px;
   color: #f3f9ff;
   pointer-events: none;
+}
+
+.btn,
+button {
+  border: none;
+}
+
+.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.btn-tr {
+  background-color: transparent;
+}
+.btn-tr:active, .btn-tr:hover {
+  background-color: rgba(107, 143, 153, 0.4) !important;
+}
+
+.icon-user {
+  background-color: #6B8F99;
+  border-radius: 4px;
+}
+.icon-user img {
+  width: 35px;
 }
