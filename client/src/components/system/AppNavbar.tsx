@@ -12,7 +12,7 @@ const AppNavbar = () => {
                 <span>goodhabit</span>
             </Navbar.Brand>
 
-            <UserButton />
+            <UserButton userName='Nazwa użytkownika' />
         </Container>
     </Navbar>
 }
