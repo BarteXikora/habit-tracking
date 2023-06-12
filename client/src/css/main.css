@@ -3,21 +3,21 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #f3f9ff;
-  color: #001B29;
+  background-color: #F8FCFF;
+  color: #0E0025;
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
 }
 
 .navbar {
-  background-color: #001B29;
-  color: #f3f9ff;
+  background-color: #0E0025;
+  color: #F8FCFF;
 }
 
 .navbar-brand {
   font-family: "Quando", serif;
   font-size: 24px;
-  color: #f3f9ff;
+  color: #F8FCFF;
   pointer-events: none;
 }
 
@@ -43,7 +43,7 @@ button {
 }
 
 .icon-user {
-  background-color: #6B8F99;
+  background-color: #577082;
   border-radius: 4px;
 }
 .icon-user img {
