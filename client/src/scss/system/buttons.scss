@@ -12,10 +12,14 @@ button {
     background-color: transparent;
     color: $black;
 
-    &:active,
     &:hover {
-        background-color: $courtain-gray !important;
+        background-color: $courtain-gray;
         color: $black;
+    }
+
+    &:active {
+        background-color: $prim-3 !important;
+        color: $black !important;
     }
 }
 

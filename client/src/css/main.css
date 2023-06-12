@@ -38,9 +38,13 @@ button {
   background-color: transparent;
   color: #0E0025;
 }
-.btn-tr:active, .btn-tr:hover {
-  background-color: rgba(87, 112, 130, 0.4) !important;
+.btn-tr:hover {
+  background-color: rgba(87, 112, 130, 0.4);
   color: #0E0025;
+}
+.btn-tr:active {
+  background-color: #9087FE !important;
+  color: #0E0025 !important;
 }
 
 .icon-user img {
