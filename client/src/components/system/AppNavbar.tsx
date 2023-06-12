@@ -4,7 +4,7 @@ import UserButton from './UserButton'
 import imgLogo from '../../img/logo.png'
 
 const AppNavbar = () => {
-    return <Navbar className='py-1 px-4'>
+    return <Navbar className='fixed-top py-1 px-4'>
         <Container fluid>
             <Navbar.Brand className='d-flex'>
                 <img src={imgLogo} alt='goodhabit' width={35} className='me-2' />

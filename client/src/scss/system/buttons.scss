@@ -6,6 +6,10 @@ button {
 .btn {
     display: flex;
     align-items: center;
+
+    img {
+        padding-right: 10px;
+    }
 }
 
 .btn-tr {
