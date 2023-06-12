@@ -10,18 +10,17 @@ button {
 
 .btn-tr {
     background-color: transparent;
+    color: $black;
 
     &:active,
     &:hover {
         background-color: $courtain-gray !important;
+        color: $black;
     }
 }
 
 // User button:
 .icon-user {
-    background-color: $gray-5;
-    border-radius: $radius;
-
     img {
         width: 35px;
     }

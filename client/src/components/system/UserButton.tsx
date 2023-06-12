@@ -7,7 +7,7 @@ const UserButton = () => {
         <span>Nazwa użytkownika</span>
 
         <div className="icon-user ms-3 p-1">
-            <img src={iconUser} alt='Miniatura avatara użytkownika.' />
+            <img src={iconUser} alt='Miniatura avatara użytkownika.' className='pb-1' />
         </div>
     </Button>
 }

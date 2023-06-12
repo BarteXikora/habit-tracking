@@ -10,14 +10,13 @@ body {
 }
 
 .navbar {
-  background-color: #0E0025;
-  color: #F8FCFF;
+  background-color: #E7F3FC;
 }
 
 .navbar-brand {
   font-family: "Quando", serif;
   font-size: 24px;
-  color: #F8FCFF;
+  color: #0E0025;
   pointer-events: none;
 }
 
@@ -37,15 +36,13 @@ button {
 
 .btn-tr {
   background-color: transparent;
+  color: #0E0025;
 }
 .btn-tr:active, .btn-tr:hover {
-  background-color: rgba(107, 143, 153, 0.4) !important;
+  background-color: rgba(87, 112, 130, 0.4) !important;
+  color: #0E0025;
 }
 
-.icon-user {
-  background-color: #577082;
-  border-radius: 4px;
-}
 .icon-user img {
   width: 35px;
 }
