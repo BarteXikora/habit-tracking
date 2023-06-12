@@ -8,6 +8,9 @@ import Page404 from './components/sites/Page404'
 import { Provider } from 'react-redux'
 import store from './functions/reduxStore'
 
+import 'bootstrap/dist/css/bootstrap.min.css'
+import './css/main.css'
+
 const App = () => {
   return <Provider store={store}>
 

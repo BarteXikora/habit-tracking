@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Quando&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #F8FCFF;
+  color: #0E0025;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+}
+
+.navbar {
+  background-color: #E7F3FC;
+}
+
+.navbar-brand {
+  font-family: "Quando", serif;
+  font-size: 24px;
+  color: #0E0025;
+  pointer-events: none;
+}
+
+.btn,
+button {
+  border: none;
+}
+
+.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.btn-tr {
+  background-color: transparent;
+  color: #0E0025;
+}
+.btn-tr:hover {
+  background-color: rgba(87, 112, 130, 0.4);
+  color: #0E0025;
+}
+.btn-tr:active {
+  background-color: #9087FE !important;
+  color: #0E0025 !important;
+}
+
+.icon-user img {
+  width: 35px;
+}
