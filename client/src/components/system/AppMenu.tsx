@@ -1,5 +1,9 @@
+import { useRef } from 'react'
 import { useLocation, Link } from 'react-router-dom'
 import { Container, Button } from 'react-bootstrap'
+import { useAppDispatch, useAppSelector } from '../../functions/reduxStore'
+import { toggleMenu } from '../../features/menu'
+import useCssAnimate from '../../functions/useCssAnimate'
 import Logo from './Logo'
 
 import iconDashboard from '../../img/icon-dashboard.svg'
@@ -9,8 +13,6 @@ import iconNoIcon from '../../img/icon-no-icon.svg'
 import iconSettings from '../../img/icon-settings.svg'
 import iconLogout from '../../img/icon-logout.svg'
 import iconX from '../../img/icon-x.svg'
-import { useAppDispatch, useAppSelector } from '../../functions/reduxStore'
-import { toggleMenu } from '../../features/menu'
 
 export interface IAppMenu {
     habitsList: {
@@ -35,7 +37,24 @@ const AppMenu = ({ habitsList }: IAppMenu) => {
     const showMenu: boolean = useAppSelector((state) => state.menu.isShown)
     const dispatch = useAppDispatch()
 
-    return <div className={`app-menu ${showMenu && 'app-menu-shown'} fixed-top h-100 py-4 px-4`}>
+    const menuRef = useRef(null)
+
+    useCssAnimate(showMenu, [{
+        element: menuRef.current,
+        animations: [{
+            on: true,
+            steps: [{ addClass: ['app-menu-shown'], remClass: ['d-none', 'app-menu-hidden'] }]
+        }, {
+            on: false,
+            steps: [{
+                addClass: ['app-menu-hidden'], remClass: ['app-menu-shown']
+            }, {
+                delay: 200, addClass: ['d-none']
+            }]
+        }]
+    }])
+
+    return <div className={`app-menu d-lg-block fixed-top h-100 py-4 px-4`} ref={menuRef}>
         <Button
             className='btn btn-icon btn-wrong btn-close-menu d-flex d-lg-none p-2'
             onClick={() => dispatch(toggleMenu({ type: 'hide' }))}

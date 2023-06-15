@@ -115,6 +115,10 @@ button {
   background-color: #E7F3FC;
   width: 350px;
   z-index: 500;
+  left: 0;
+}
+.app-menu.app-menu-shown, .app-menu.app-menu-hidden {
+  left: 0;
 }
 
 @media (max-width: 991.98px) {
@@ -124,6 +128,53 @@ button {
     z-index: 1500;
   }
   .app-menu.app-menu-shown {
+    -webkit-animation-name: menu-slide-in;
+            animation-name: menu-slide-in;
+    -webkit-animation-duration: 200ms;
+            animation-duration: 200ms;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
     left: 0;
+  }
+  .app-menu.app-menu-hidden {
+    -webkit-animation-name: menu-slide-out;
+            animation-name: menu-slide-out;
+    -webkit-animation-duration: 200ms;
+            animation-duration: 200ms;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    left: -100vw;
+  }
+}
+@-webkit-keyframes menu-slide-in {
+  0% {
+    left: -100vw;
+  }
+  100% {
+    left: 0;
+  }
+}
+@keyframes menu-slide-in {
+  0% {
+    left: -100vw;
+  }
+  100% {
+    left: 0;
+  }
+}
+@-webkit-keyframes menu-slide-out {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100vw;
+  }
+}
+@keyframes menu-slide-out {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100vw;
   }
 }
