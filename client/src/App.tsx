@@ -11,8 +11,13 @@ import store from './functions/reduxStore'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './css/main.css'
 
+import DevSizes from './components/__dev/devBootstrapSizes/DevSizes'
+
 const App = () => {
   return <Provider store={store}>
+
+    {/* Dev sizes - to delete */}
+    <DevSizes />
 
     {/* App router: */}
     <Routes>
