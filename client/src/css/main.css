@@ -123,7 +123,7 @@ button {
 
 @media (max-width: 991.98px) {
   .app-menu {
-    position: absolute;
+    position: fixed;
     left: -100vw;
     z-index: 1500;
   }
@@ -146,6 +146,16 @@ button {
     left: -100vw;
   }
 }
+.app-courtain {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(14, 0, 37, 0.8);
+  z-index: 1050;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
 @-webkit-keyframes menu-slide-in {
   0% {
     left: -100vw;
@@ -154,6 +164,7 @@ button {
     left: 0;
   }
 }
+
 @keyframes menu-slide-in {
   0% {
     left: -100vw;
