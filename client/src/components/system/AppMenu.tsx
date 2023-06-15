@@ -9,6 +9,8 @@ import iconNoIcon from '../../img/icon-no-icon.svg'
 import iconSettings from '../../img/icon-settings.svg'
 import iconLogout from '../../img/icon-logout.svg'
 import iconX from '../../img/icon-x.svg'
+import { useAppDispatch, useAppSelector } from '../../functions/reduxStore'
+import { toggleMenu } from '../../features/menu'
 
 export interface IAppMenu {
     habitsList: {
@@ -30,8 +32,14 @@ const isActive = (path: string, element: string): boolean => {
 const AppMenu = ({ habitsList }: IAppMenu) => {
     const location = useLocation()
 
-    return <div className='app-menu _app-menu-shown fixed-top h-100 py-4 px-4'>
-        <Button className='btn btn-icon btn-wrong btn-close-menu d-flex d-lg-none p-2'>
+    const showMenu: boolean = useAppSelector((state) => state.menu.isShown)
+    const dispatch = useAppDispatch()
+
+    return <div className={`app-menu ${showMenu && 'app-menu-shown'} fixed-top h-100 py-4 px-4`}>
+        <Button
+            className='btn btn-icon btn-wrong btn-close-menu d-flex d-lg-none p-2'
+            onClick={() => dispatch(toggleMenu({ type: 'hide' }))}
+        >
             <img src={iconX} alt='Zamknij menu' />
         </Button>
 
