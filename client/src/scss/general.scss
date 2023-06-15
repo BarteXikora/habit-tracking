@@ -6,3 +6,22 @@ body {
     font-family: $font-default;
     font-size: $f-default;
 }
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: $font-title;
+}
+
+h1 {
+    font-size: $f-title;
+}
+
+h2 {
+    font-size: $f-subtitle;
+}
+
+h3 {
+    font-size: $f-big;
+}
