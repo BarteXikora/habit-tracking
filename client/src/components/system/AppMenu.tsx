@@ -9,7 +9,7 @@ import iconSettings from '../../img/icon-settings.svg'
 
 export interface IAppMenu {
     habitsList: {
-        id: number
+        id: string
         name: string
         icon?: string
     }[]

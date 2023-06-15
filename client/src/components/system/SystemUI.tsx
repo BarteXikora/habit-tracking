@@ -11,7 +11,7 @@ const SystemUI = ({ children }: IChildren) => {
     return <>
         <AppNavbar />
 
-        <AppMenu habitsList={[{ id: 5, name: 'Nauka języka angielskiego' }, { id: 7, name: 'Trening' }]} />
+        <AppMenu habitsList={[{ id: 'nauka-jezyka-angielskiego', name: 'Nauka języka angielskiego' }, { id: 'trening2', name: 'Trening' }]} />
 
         {children}
     </>
