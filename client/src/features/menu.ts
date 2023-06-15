@@ -5,7 +5,7 @@ export interface Menu {
 }
 
 const initialState: Menu = {
-    isShown: true
+    isShown: false
 }
 
 export const menuSlice = createSlice({
