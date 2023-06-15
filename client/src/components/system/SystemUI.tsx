@@ -8,15 +8,13 @@ type IChildren = {
 }
 
 const SystemUI = ({ children }: IChildren) => {
-    return <div>
+    return <>
         <AppNavbar />
-
-        {/* <AppMenu habitsList={[]} /> */}
 
         <AppMenu habitsList={[{ name: 'Nauka języka angielskiego' }, { name: 'Trening' }]} />
 
         {children}
-    </div>
+    </>
 }
 
 export default SystemUI

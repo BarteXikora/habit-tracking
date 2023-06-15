@@ -9,6 +9,25 @@ body {
   font-size: 14px;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Quando", serif;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
 .navbar {
   background-color: #E7F3FC;
   z-index: 1000;
@@ -36,6 +55,7 @@ button {
 }
 .btn img {
   padding-right: 10px;
+  width: 45px;
 }
 
 .btn-tr {
@@ -49,10 +69,6 @@ button {
 .btn-tr:active {
   background-color: #9087FE !important;
   color: #0E0025 !important;
-}
-
-.icon-user img {
-  width: 35px;
 }
 
 .app-menu {

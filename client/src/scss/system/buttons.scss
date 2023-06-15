@@ -9,6 +9,7 @@ button {
 
     img {
         padding-right: 10px;
+        width: 45px;
     }
 }
 
@@ -24,12 +25,5 @@ button {
     &:active {
         background-color: $prim-3 !important;
         color: $black !important;
-    }
-}
-
-// User button:
-.icon-user {
-    img {
-        width: 35px;
     }
 }

@@ -1,7 +1,7 @@
 import { Navbar, Container } from 'react-bootstrap'
 import UserButton from './UserButton'
 
-import imgLogo from '../../img/logo.png'
+import imgLogo from '../../img/logo.svg'
 
 const AppNavbar = () => {
     return <Navbar className='fixed-top py-1 px-4'>
