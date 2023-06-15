@@ -18,12 +18,22 @@ button {
     color: $black;
 
     &:hover {
-        background-color: $courtain-gray;
+        background-color: $prim-2;
         color: $black;
     }
 
     &:active {
         background-color: $prim-3 !important;
         color: $black !important;
+    }
+}
+
+.btn-active {
+    background-color: $prim-2;
+
+    &:hover,
+    &:active {
+        background-color: $prim-2 !important;
+        cursor: default;
     }
 }

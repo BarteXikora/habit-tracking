@@ -63,12 +63,20 @@ button {
   color: #0E0025;
 }
 .btn-tr:hover {
-  background-color: rgba(87, 112, 130, 0.4);
+  background-color: #C8D1FF;
   color: #0E0025;
 }
 .btn-tr:active {
   background-color: #9087FE !important;
   color: #0E0025 !important;
+}
+
+.btn-active {
+  background-color: #C8D1FF;
+}
+.btn-active:hover, .btn-active:active {
+  background-color: #C8D1FF !important;
+  cursor: default;
 }
 
 .app-menu {
