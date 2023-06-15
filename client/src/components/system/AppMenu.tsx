@@ -4,6 +4,7 @@ import iconDashboard from '../../img/icon-dashboard.svg'
 import iconLearn from '../../img/icon-learn.svg'
 import iconAdd from '../../img/icon-add.svg'
 import iconNoIcon from '../../img/icon-no-icon.svg'
+import iconSettings from '../../img/icon-settings.svg'
 
 export interface IAppMenu {
     habitsList: {
@@ -13,13 +14,11 @@ export interface IAppMenu {
 }
 
 const AppMenu = ({ habitsList }: IAppMenu) => {
-    return <div className='app-menu fixed-top d-flex flex-column h-100 py-5 px-4'>
-        <Container fluid>
+    return <div className='app-menu fixed-top h-100 py-5 px-4'>
+        <Container fluid className='d-flex flex-column h-100 px-0'>
             <div className="py-3"></div>
 
             <div className="h-100">
-                <h2>Menu:</h2>
-
                 <Button className="btn btn-tr w-100">
                     <img src={iconDashboard} alt='Pulpit' />
 
@@ -34,12 +33,10 @@ const AppMenu = ({ habitsList }: IAppMenu) => {
 
                 <hr className='my-4' />
 
-                <h2>Śledzone nawyki:</h2>
-
-                <Button className='btn btn-tr w-100 mb-2'>
+                <Button className='btn btn-tr w-100 mb-3'>
                     <img src={iconAdd} alt='Dodaj śledzenie nawyku' />
 
-                    Dodaj nowe
+                    Dodaj nowy nawyk
                 </Button>
 
                 {
@@ -59,17 +56,16 @@ const AppMenu = ({ habitsList }: IAppMenu) => {
                 }
             </div>
 
-            {/* <div>
-    <hr className='my-4' />
+            <div>
+                <hr className='my-4' />
 
-    <Button className='btn btn-tr w-100'>
-        <img src={iconSettings} alt='Ustawienia' />
+                <Button className='btn btn-tr w-100'>
+                    <img src={iconSettings} alt='Ustawienia' />
 
-        Ustawienia
-    </Button>
-</div> */}
+                    Ustawienia
+                </Button>
+            </div>
         </Container>
-
     </div>
 }
 
