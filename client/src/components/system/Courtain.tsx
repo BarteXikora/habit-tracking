@@ -1,9 +1,11 @@
 import { useRef } from 'react'
-import { useAppSelector } from '../../functions/reduxStore'
+import { useAppDispatch, useAppSelector } from '../../functions/reduxStore'
 import useCssAnimate from '../../functions/useCssAnimate'
+import { toggleMenu } from '../../features/menu'
 
 const Courtain = () => {
     const isShown: boolean = useAppSelector((state) => state.menu.isShown)
+    const dispatch = useAppDispatch()
 
     const courtainRef = useRef(null)
     useCssAnimate(isShown, [{
@@ -19,7 +21,11 @@ const Courtain = () => {
         }]
     }])
 
-    return <div className='app-courtain d-none' ref={courtainRef}></div>
+    return <div
+        className='app-courtain d-none d-lg-none'
+        ref={courtainRef}
+        onClick={() => dispatch(toggleMenu({ type: 'hide' }))}
+    ></div>
 }
 
 export default Courtain
