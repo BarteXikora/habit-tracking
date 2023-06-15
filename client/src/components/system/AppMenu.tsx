@@ -1,9 +1,9 @@
-import { Button } from 'react-bootstrap'
+import { Container, Button } from 'react-bootstrap'
 
-import iconDashboard from '../../img/icon-dashboard.png'
-import iconNoIcon from '../../img/icon-no-icon.png'
-import iconLearn from '../../img/icon-learn.png'
-import iconSettings from '../../img/icon-settings.png'
+import iconDashboard from '../../img/icon-dashboard.svg'
+import iconLearn from '../../img/icon-learn.svg'
+import iconAdd from '../../img/icon-add.svg'
+import iconNoIcon from '../../img/icon-no-icon.svg'
 
 export interface IAppMenu {
     habitsList: {
@@ -14,49 +14,62 @@ export interface IAppMenu {
 
 const AppMenu = ({ habitsList }: IAppMenu) => {
     return <div className='app-menu fixed-top d-flex flex-column h-100 py-5 px-4'>
-        <div className="py-3"></div>
+        <Container fluid>
+            <div className="py-3"></div>
 
-        <div className="h-100">
-            <Button className="btn btn-tr w-100">
-                <img src={iconDashboard} alt="" />
+            <div className="h-100">
+                <h2>Menu:</h2>
 
-                Pulpit
-            </Button>
+                <Button className="btn btn-tr w-100">
+                    <img src={iconDashboard} alt='Pulpit' />
 
-            <hr className='my-4' />
+                    Pulpit
+                </Button>
 
-            {
-                habitsList.length > 0 ?
+                <Button className='btn btn-tr w-100'>
+                    <img src={iconLearn} alt='Poradniki' />
 
-                    habitsList.map(habit => {
-                        return <Button className='btn btn-tr w-100'>
-                            <img src={habit.icon ? habit.icon : iconNoIcon} alt={`Ikona ${habit.name}`} />
+                    Poradniki
+                </Button>
 
-                            {habit.name}
-                        </Button>
-                    })
+                <hr className='my-4' />
 
-                    :
+                <h2>Śledzone nawyki:</h2>
 
-                    <span>Nie śledzisz jeszcze żadnych nawyków...</span>
-            }
-        </div>
+                <Button className='btn btn-tr w-100 mb-2'>
+                    <img src={iconAdd} alt='Dodaj śledzenie nawyku' />
 
-        <div>
-            <hr className='my-4' />
+                    Dodaj nowe
+                </Button>
 
-            <Button className='btn btn-tr w-100'>
-                <img src={iconLearn} alt='Poradniki' />
+                {
+                    habitsList.length > 0 ?
 
-                Poradniki
-            </Button>
+                        habitsList.map(habit => {
+                            return <Button className='btn btn-tr w-100'>
+                                <img src={habit.icon ? habit.icon : iconNoIcon} alt={`Ikona ${habit.name}`} />
 
-            <Button className='btn btn-tr w-100'>
-                <img src={iconSettings} alt='Ustawienia' />
+                                {habit.name}
+                            </Button>
+                        })
 
-                Ustawienia
-            </Button>
-        </div>
+                        :
+
+                        <span>Nie śledzisz jeszcze żadnych nawyków...</span>
+                }
+            </div>
+
+            {/* <div>
+    <hr className='my-4' />
+
+    <Button className='btn btn-tr w-100'>
+        <img src={iconSettings} alt='Ustawienia' />
+
+        Ustawienia
+    </Button>
+</div> */}
+        </Container>
+
     </div>
 }
 
