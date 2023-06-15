@@ -6,10 +6,42 @@ button {
 .btn {
     display: flex;
     align-items: center;
+    border-radius: $radius;
 
     img {
-        padding-right: 10px;
-        width: 45px;
+        width: 40px;
+    }
+}
+
+.btn-prim {
+    background-color: $prim-4;
+    color: $white;
+
+    &:hover {
+        background-color: $prim-6;
+    }
+
+    &:active {
+        background-color: $prim-8 !important;
+    }
+}
+
+.btn-wrong {
+    background-color: $wrong-5;
+    color: $black;
+
+    &:hover {
+        background-color: $wrong-4;
+    }
+
+    &:active {
+        background-color: $wrong-3 !important;
+    }
+}
+
+.btn-icon-text {
+    img {
+        margin-right: 10px;
     }
 }
 
@@ -36,4 +68,10 @@ button {
         background-color: $prim-2 !important;
         cursor: default;
     }
+}
+
+.btn-close-menu {
+    position: absolute;
+    top: 30px;
+    right: -80px;
 }

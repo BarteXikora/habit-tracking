@@ -1,5 +1,18 @@
 .app-menu {
     background-color: $gray-3;
-    width: 400px;
+    width: 350px;
     z-index: 500;
+}
+
+@media (max-width: 991.98px) {
+    .app-menu {
+        position: absolute;
+        // width: 100vw;
+        left: -100vw;
+        z-index: 1500;
+
+        &.app-menu-shown {
+            left: 0;
+        }
+    }
 }

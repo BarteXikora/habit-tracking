@@ -7,7 +7,7 @@ export interface IUserButton {
 }
 
 const UserButton = ({ userName }: IUserButton) => {
-    return <Button className='btn btn-tr p-0 ps-3'>
+    return <Button className='d-none d-lg-flex btn btn-tr p-0 ps-3'>
         <span>{userName}</span>
 
         <div className="icon-user ms-2 p-1">

@@ -52,10 +52,36 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border-radius: 4px;
 }
 .btn img {
-  padding-right: 10px;
-  width: 45px;
+  width: 40px;
+}
+
+.btn-prim {
+  background-color: #6944FE;
+  color: #F8FCFF;
+}
+.btn-prim:hover {
+  background-color: #490ACF;
+}
+.btn-prim:active {
+  background-color: #200064 !important;
+}
+
+.btn-wrong {
+  background-color: #EC2A0F;
+  color: #0E0025;
+}
+.btn-wrong:hover {
+  background-color: #FE6550;
+}
+.btn-wrong:active {
+  background-color: #FAA498 !important;
+}
+
+.btn-icon-text img {
+  margin-right: 10px;
 }
 
 .btn-tr {
@@ -79,8 +105,25 @@ button {
   cursor: default;
 }
 
+.btn-close-menu {
+  position: absolute;
+  top: 30px;
+  right: -80px;
+}
+
 .app-menu {
   background-color: #E7F3FC;
-  width: 400px;
+  width: 350px;
   z-index: 500;
+}
+
+@media (max-width: 991.98px) {
+  .app-menu {
+    position: absolute;
+    left: -100vw;
+    z-index: 1500;
+  }
+  .app-menu.app-menu-shown {
+    left: 0;
+  }
 }
