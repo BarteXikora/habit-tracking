@@ -265,3 +265,19 @@ button {
     padding-left: 0;
   }
 }
+.app-header {
+  position: relative;
+  background: url("../img/img-header.png");
+  background-size: cover;
+  background-position: center;
+  color: #F8FCFF;
+}
+.app-header .app-header-courtain {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(72, 14, 238, 0.5);
+}
