@@ -197,6 +197,7 @@ button {
   position: fixed;
   width: 100vw;
   height: 100vh;
+  top: 0;
   background-color: rgba(14, 0, 37, 0.8);
   z-index: 1050;
   -webkit-transition: all 0.2s ease-in-out;
@@ -252,4 +253,32 @@ button {
   100% {
     opacity: 0;
   }
+}
+.app-container {
+  margin-top: 56px;
+  padding-left: 350px;
+  width: 100%;
+}
+
+@media (max-width: 991.98px) {
+  .app-container {
+    margin-top: 64px;
+    padding-left: 0;
+  }
+}
+.app-header {
+  position: relative;
+  background: url("../img/img-header.png");
+  background-size: cover;
+  background-position: center;
+  color: #F8FCFF;
+}
+.app-header .app-header-courtain {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(72, 14, 238, 0.5);
 }
