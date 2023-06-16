@@ -1,5 +1,4 @@
 import { ReactElement } from 'react'
-import { Container } from 'react-bootstrap'
 
 import AppNavbar from './AppNavbar'
 import AppMenu from './AppMenu'
@@ -17,9 +16,9 @@ const SystemUI = ({ children }: IChildren) => {
 
         <AppNavbar />
 
-        <Container fluid className="app-container p-0">
+        <div className="app-container">
             {children}
-        </Container>
+        </div>
     </>
 }
 
