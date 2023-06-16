@@ -9,8 +9,28 @@ body {
   font-size: 14px;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Quando", serif;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
 .navbar {
   background-color: #E7F3FC;
+  z-index: 1000;
 }
 
 .navbar-brand {
@@ -18,6 +38,21 @@ body {
   font-size: 24px;
   color: #0E0025;
   pointer-events: none;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+.btn.show {
+  background-color: #9087FE;
+  color: #0E0025;
+}
+
+.dropdown-menu {
+  border: 0;
+  border-radius: 4px;
+  background-color: #E7F3FC;
 }
 
 .btn,
@@ -32,6 +67,36 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border-radius: 4px;
+}
+.btn img {
+  width: 40px;
+}
+
+.btn-prim {
+  background-color: #6944FE;
+  color: #F8FCFF;
+}
+.btn-prim:hover {
+  background-color: #490ACF;
+}
+.btn-prim:active {
+  background-color: #200064 !important;
+}
+
+.btn-wrong {
+  background-color: #EC2A0F;
+  color: #0E0025;
+}
+.btn-wrong:hover {
+  background-color: #FE6550;
+}
+.btn-wrong:active {
+  background-color: #FAA498 !important;
+}
+
+.btn-icon-text img {
+  margin-right: 10px;
 }
 
 .btn-tr {
@@ -39,7 +104,7 @@ button {
   color: #0E0025;
 }
 .btn-tr:hover {
-  background-color: rgba(87, 112, 130, 0.4);
+  background-color: #C8D1FF;
   color: #0E0025;
 }
 .btn-tr:active {
@@ -47,6 +112,144 @@ button {
   color: #0E0025 !important;
 }
 
-.icon-user img {
-  width: 35px;
+.btn-active {
+  background-color: #C8D1FF;
+}
+.btn-active:hover, .btn-active:active {
+  background-color: #C8D1FF !important;
+  cursor: default;
+}
+
+.btn-close-menu {
+  position: absolute;
+  top: 30px;
+  right: -80px;
+}
+
+.app-menu {
+  background-color: #E7F3FC;
+  width: 350px;
+  z-index: 500;
+  left: 0;
+}
+.app-menu.app-menu-shown, .app-menu.app-menu-hidden {
+  left: 0;
+}
+
+@media (max-width: 991.98px) {
+  .app-menu {
+    position: fixed;
+    left: -100vw;
+    z-index: 1500;
+  }
+  .app-menu.app-menu-shown {
+    -webkit-animation-name: menu-slide-in;
+            animation-name: menu-slide-in;
+    -webkit-animation-duration: 200ms;
+            animation-duration: 200ms;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    left: 0;
+  }
+  .app-menu.app-menu-hidden {
+    -webkit-animation-name: menu-slide-out;
+            animation-name: menu-slide-out;
+    -webkit-animation-duration: 200ms;
+            animation-duration: 200ms;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    left: -100vw;
+  }
+}
+@-webkit-keyframes menu-slide-in {
+  0% {
+    left: -100vw;
+  }
+  100% {
+    left: 0;
+  }
+}
+@keyframes menu-slide-in {
+  0% {
+    left: -100vw;
+  }
+  100% {
+    left: 0;
+  }
+}
+@-webkit-keyframes menu-slide-out {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100vw;
+  }
+}
+@keyframes menu-slide-out {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100vw;
+  }
+}
+.app-courtain {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(14, 0, 37, 0.8);
+  z-index: 1050;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.app-courtain.app-courtain-fade-out {
+  -webkit-animation-name: fade-out;
+          animation-name: fade-out;
+  -webkit-animation-duration: 200ms;
+          animation-duration: 200ms;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  opacity: 0;
+}
+.app-courtain.app-courtain-fade-in {
+  -webkit-animation-name: fade-in;
+          animation-name: fade-in;
+  -webkit-animation-duration: 200ms;
+          animation-duration: 200ms;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }

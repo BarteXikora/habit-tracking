@@ -1,16 +1,24 @@
-import { Navbar, Container } from 'react-bootstrap'
+import { Navbar, Container, Button } from 'react-bootstrap'
 import UserButton from './UserButton'
+import Logo from './Logo'
 
-import imgLogo from '../../img/logo.png'
+import iconMenu from '../../img/icon-menu.svg'
+import { useAppDispatch } from '../../functions/reduxStore'
+import { toggleMenu } from '../../features/menu'
 
 const AppNavbar = () => {
-    return <Navbar className='py-1 px-4'>
-        <Container fluid>
-            <Navbar.Brand className='d-flex'>
-                <img src={imgLogo} alt='goodhabit' width={35} className='me-2' />
+    const dispatch = useAppDispatch()
 
-                <span>goodhabit</span>
-            </Navbar.Brand>
+    return <Navbar className='fixed-top py-1 px-4'>
+        <Container fluid className='p-0'>
+            <Button
+                className='d-flex d-lg-none btn btn-prim me-3 p-2'
+                onClick={() => dispatch(toggleMenu({ type: 'show' }))}
+            >
+                <img src={iconMenu} alt='Menu' />
+            </Button>
+
+            <Logo />
 
             <UserButton userName='Nazwa użytkownika' />
         </Container>

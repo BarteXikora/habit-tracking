@@ -1,0 +1,95 @@
+.app-menu {
+    background-color: $gray-3;
+    width: 350px;
+    z-index: 500;
+    left: 0;
+
+    &.app-menu-shown,
+    &.app-menu-hidden {
+        left: 0;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .app-menu {
+        position: fixed;
+        left: -100vw;
+        z-index: 1500;
+
+        &.app-menu-shown {
+            animation-name: menu-slide-in;
+            animation-duration: 200ms;
+            animation-timing-function: ease-out;
+            left: 0;
+        }
+
+        &.app-menu-hidden {
+            animation-name: menu-slide-out;
+            animation-duration: 200ms;
+            animation-timing-function: ease-in;
+            left: -100vw;
+        }
+    }
+}
+
+@keyframes menu-slide-in {
+    0% {
+        left: -100vw;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes menu-slide-out {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: -100vw;
+    }
+}
+
+.app-courtain {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: $courtain-black;
+    z-index: 1050;
+    transition: $transition;
+
+    &.app-courtain-fade-out {
+        animation-name: fade-out;
+        animation-duration: 200ms;
+        animation-timing-function: ease-in-out;
+        opacity: 0;
+    }
+
+    &.app-courtain-fade-in {
+        animation-name: fade-in;
+        animation-duration: 200ms;
+        animation-timing-function: ease-in-out;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

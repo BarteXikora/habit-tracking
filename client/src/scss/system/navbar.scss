@@ -1,5 +1,6 @@
 .navbar {
     background-color: $gray-3;
+    z-index: 1000;
 }
 
 .navbar-brand {
@@ -7,4 +8,19 @@
     font-size: $f-subtitle;
     color: $black;
     pointer-events: none;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.btn.show {
+    background-color: $prim-3;
+    color: $black;
+}
+
+.dropdown-menu {
+    border: 0;
+    border-radius: $radius;
+    background-color: $gray-3;
 }

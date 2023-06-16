@@ -1,0 +1,56 @@
+._sizes {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000000;
+}
+
+._size {
+    padding: 5px 15px;
+    background-color: #ff0044;
+    border-radius: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    border-left: 8px solid #180e28;
+}
+
+._size.d-xl-flex {
+    background-color: #006aff;
+}
+
+._size.d-lg-flex {
+    background-color: #00db25;
+}
+
+._size.d-md-flex {
+    background-color: #cfb700;
+}
+
+._size.d-sm-flex {
+    background-color: #ff4400;
+}
+
+.__scroll {
+    min-height: 200vh;
+}
+
+.__red {
+    background-color: #ff0044;
+}
+
+.__orange {
+    background-color: #ff4400;
+}
+
+.__yellow {
+    background-color: #cfb700;
+}
+
+.__green {
+    background-color: #00db25;
+}
+
+.__blue {
+    background-color: #006aff;
+}
