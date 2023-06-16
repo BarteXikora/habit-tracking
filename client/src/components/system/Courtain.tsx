@@ -12,12 +12,13 @@ const Courtain = () => {
         element: courtainRef.current,
         animations: [{
             on: true,
-            steps: [{ remClass: ['d-none'] }]
+            steps: [{ addClass: ['app-courtain-fade-in'], remClass: ['d-none'] }]
         }, {
             on: false,
-            steps: [{
-                addClass: ['d-none']
-            }]
+            steps: [
+                { addClass: ['app-courtain-fade-out'] },
+                { delay: 200, addClass: ['d-none'], remClass: ['app-courtain-fade-in', 'app-courtain-fade-out'] }
+            ]
         }]
     }])
 

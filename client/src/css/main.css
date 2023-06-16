@@ -146,16 +146,6 @@ button {
     left: -100vw;
   }
 }
-.app-courtain {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(14, 0, 37, 0.8);
-  z-index: 1050;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
-
 @-webkit-keyframes menu-slide-in {
   0% {
     left: -100vw;
@@ -164,7 +154,6 @@ button {
     left: 0;
   }
 }
-
 @keyframes menu-slide-in {
   0% {
     left: -100vw;
@@ -187,5 +176,65 @@ button {
   }
   100% {
     left: -100vw;
+  }
+}
+.app-courtain {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(14, 0, 37, 0.8);
+  z-index: 1050;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.app-courtain.app-courtain-fade-out {
+  -webkit-animation-name: fade-out;
+          animation-name: fade-out;
+  -webkit-animation-duration: 200ms;
+          animation-duration: 200ms;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  opacity: 0;
+}
+.app-courtain.app-courtain-fade-in {
+  -webkit-animation-name: fade-in;
+          animation-name: fade-in;
+  -webkit-animation-duration: 200ms;
+          animation-duration: 200ms;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
