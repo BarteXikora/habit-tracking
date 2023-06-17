@@ -282,3 +282,13 @@ button {
   height: 100%;
   background-color: rgba(72, 14, 238, 0.5);
 }
+
+.title-left-habits {
+  background-color: #50C309;
+  color: #F8FCFF;
+  font-weight: bold;
+}
+.title-left-habits.title-left-habits-warn {
+  background-color: #FFC700;
+  color: #730E00;
+}

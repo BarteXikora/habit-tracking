@@ -15,3 +15,14 @@
         background-color: $courtain-prim;
     }
 }
+
+.title-left-habits {
+    background-color: $good-5;
+    color: $white;
+    font-weight: bold;
+
+    &.title-left-habits-warn {
+        background-color: $warn-5;
+        color: $wrong-8;
+    }
+}
