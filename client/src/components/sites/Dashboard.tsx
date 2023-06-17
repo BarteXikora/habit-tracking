@@ -1,6 +1,6 @@
 import { Container, Row, Col } from 'react-bootstrap'
 
-import Header from '../decorations/Header'
+import Header from '../sections/Header'
 
 const Dashboard = () => {
     return <Container fluid>
