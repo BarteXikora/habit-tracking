@@ -6,6 +6,7 @@ export interface Habits {
     icon: string | null
     options: string[]
     selectedOption: string | null
+    note: string | null
 }
 
 const initialState: Habits[] = [{
@@ -13,13 +14,15 @@ const initialState: Habits[] = [{
     name: 'Nauka języka angielskiego',
     icon: null,
     options: ['done', 'not-done'],
-    selectedOption: null
+    selectedOption: null,
+    note: null
 }, {
     id: 'trening2',
     name: 'Trening',
     icon: null,
     options: ['not-applicalbe'],
-    selectedOption: null
+    selectedOption: null,
+    note: null
 }]
 
 export const habitsSlice = createSlice({
@@ -34,9 +37,19 @@ export const habitsSlice = createSlice({
 
                 return habit
             })
+        },
+
+        addNote: (state, action) => {
+            const { id, note } = action.payload
+
+            state.map(habit => {
+                if (habit.id === id) habit.note = note
+
+                return habit
+            })
         }
     }
 })
 
 export default habitsSlice.reducer
-export const { selectOption } = habitsSlice.actions
+export const { selectOption, addNote } = habitsSlice.actions
