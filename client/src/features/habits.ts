@@ -13,7 +13,7 @@ const initialState: Habits[] = [{
     name: 'Nauka języka angielskiego',
     icon: null,
     options: ['done', 'not-done'],
-    selectedOption: 'done'
+    selectedOption: null
 }, {
     id: 'trening2',
     name: 'Trening',
@@ -25,8 +25,18 @@ const initialState: Habits[] = [{
 export const habitsSlice = createSlice({
     name: 'habits',
     initialState,
-    reducers: {}
+    reducers: {
+        selectOption: (state, action) => {
+            const { id, option } = action.payload
+
+            state.map(habit => {
+                if (habit.id === id) habit.selectedOption = option
+
+                return habit
+            })
+        }
+    }
 })
 
 export default habitsSlice.reducer
-// export const {} = habitsSlice.actions
+export const { selectOption } = habitsSlice.actions

@@ -8,6 +8,8 @@ import iconNotApplicable from '../../../img/icon-not-applicable.svg'
 import iconDoneColored from '../../../img/icon-done-colored.svg'
 import iconNotDoneColored from '../../../img/icon-not-done-colored.svg'
 import iconNotApplicableColored from '../../../img/icon-not-applicable-colored.svg'
+import { useAppDispatch } from '../../../functions/reduxStore'
+import { selectOption } from '../../../features/habits'
 
 interface IHabitCard {
     habit: {
@@ -21,6 +23,7 @@ interface IHabitCard {
 
 const HabitCard = ({ habit }: IHabitCard) => {
     const [note, setNote] = useState<string>('')
+    const dispatch = useAppDispatch()
 
     return <Col md={4} className='d-grid px-2 pb-4'>
         <div className={`
@@ -106,6 +109,7 @@ const HabitCard = ({ habit }: IHabitCard) => {
                                                 option === 'done' ? iconDone : option === 'not-done' ? iconNotDone : iconNotApplicable
                                             }
                                             alt=""
+                                            onClick={() => dispatch(selectOption({ id: habit.id, option }))}
                                         />
                                     </Button>
                                 })
