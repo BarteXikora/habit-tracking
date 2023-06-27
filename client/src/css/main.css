@@ -28,6 +28,59 @@ h3 {
   font-size: 18px;
 }
 
+input,
+.form-control {
+  border-radius: 0;
+  background-color: #F8FCFF;
+  border: none;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+input:hover,
+.form-control:hover {
+  background-color: #C8D1FF;
+}
+input:focus,
+.form-control:focus {
+  background-color: #F8FCFF;
+  -webkit-box-shadow: 0 0 0 4px #9087FE !important;
+          box-shadow: 0 0 0 4px #9087FE !important;
+  border-radius: 4px;
+}
+input::-webkit-input-placeholder, .form-control::-webkit-input-placeholder {
+  color: #577082;
+}
+input::-moz-placeholder, .form-control::-moz-placeholder {
+  color: #577082;
+}
+input:-ms-input-placeholder, .form-control:-ms-input-placeholder {
+  color: #577082;
+}
+input::-ms-input-placeholder, .form-control::-ms-input-placeholder {
+  color: #577082;
+}
+input::placeholder,
+.form-control::placeholder {
+  color: #577082;
+}
+
+.section-gray-3 {
+  background-color: #E7F3FC;
+  color: #0E0025;
+}
+
+.font-good {
+  color: #50C309;
+}
+
+.font-wrong {
+  color: #EC2A0F;
+}
+
+.font-gray {
+  color: #577082;
+}
+
 .navbar {
   background-color: #E7F3FC;
   z-index: 1000;
@@ -124,6 +177,28 @@ button {
   position: absolute;
   top: 30px;
   right: -80px;
+}
+
+.btn-option {
+  background-color: #F8FCFF;
+}
+.btn-option:hover {
+  background-color: #AFC2CF;
+}
+.btn-option:active {
+  background-color: #577082 !important;
+}
+.btn-option.btn-option-done:hover {
+  background-color: #63DE17;
+}
+.btn-option.btn-option-done:active {
+  background-color: #3D9804 !important;
+}
+.btn-option.btn-option-not-done:hover {
+  background-color: #FE6550;
+}
+.btn-option.btn-option-not-done:active {
+  background-color: #DB250B !important;
 }
 
 .app-menu {
@@ -291,4 +366,20 @@ button {
 .title-left-habits.title-left-habits-warn {
   background-color: #FFC700;
   color: #730E00;
+}
+
+.habit-card-warn {
+  border-bottom: 8px solid #FFC700;
+}
+
+.habit-card-good {
+  border-bottom: 8px solid #50C309;
+}
+
+.habit-card-wrong {
+  border-bottom: 8px solid #EC2A0F;
+}
+
+.habit-card-gray {
+  border-bottom: 8px solid #577082;
 }

@@ -26,3 +26,19 @@
         color: $wrong-8;
     }
 }
+
+.habit-card-warn {
+    border-bottom: 8px solid $warn-5;
+}
+
+.habit-card-good {
+    border-bottom: 8px solid $good-5;
+}
+
+.habit-card-wrong {
+    border-bottom: 8px solid $wrong-5;
+}
+
+.habit-card-gray {
+    border-bottom: 8px solid $gray-5;
+}

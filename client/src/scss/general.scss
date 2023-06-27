@@ -25,3 +25,42 @@ h2 {
 h3 {
     font-size: $f-big;
 }
+
+input,
+.form-control {
+    border-radius: 0;
+    background-color: $white;
+    border: none;
+    transition: $transition;
+
+    &:hover {
+        background-color: $prim-2;
+    }
+
+    &:focus {
+        background-color: $white;
+        box-shadow: 0 0 0 4px $prim-3 !important;
+        border-radius: $radius;
+    }
+
+    &::placeholder {
+        color: $gray-5;
+    }
+}
+
+.section-gray-3 {
+    background-color: $gray-3;
+    color: $black;
+}
+
+.font-good {
+    color: $good-5;
+}
+
+.font-wrong {
+    color: $wrong-5;
+}
+
+.font-gray {
+    color: $gray-5;
+}
