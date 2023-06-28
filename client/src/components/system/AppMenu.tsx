@@ -22,13 +22,18 @@ export interface IAppMenu {
     }[]
 }
 
-const isActive = (path: string, element: string): boolean => {
+const isActive = (path: string, element: string | string[]): boolean => {
+    if (!Array.isArray(element)) element = [element]
     const pathType = path.substring(1, path.length).split('/')[0]
 
-    if (pathType !== 'habit')
-        return pathType === element
+    let anyMatch: boolean = false
 
-    return path.substring(1, path.length) === element
+    element.forEach(current => {
+        if (pathType !== 'habit') if (pathType === current) anyMatch = true
+        if (path.substring(1, path.length) === current) anyMatch = true
+    })
+
+    return anyMatch
 }
 
 const AppMenu = ({ habitsList }: IAppMenu) => {
@@ -77,7 +82,7 @@ const AppMenu = ({ habitsList }: IAppMenu) => {
 
             <div className="h-100 mt-4">
                 <Button
-                    className={`btn btn-tr btn-icon-text ${isActive(location.pathname, 'dashboard') && 'btn-active'} w-100`}
+                    className={`btn btn-tr btn-icon-text ${isActive(location.pathname, ['dashboard', 'step-by-step']) && 'btn-active'} w-100`}
                     onClick={() => handleNavigate('/dashboard')}
                 >
                     <img src={iconDashboard} alt='Pulpit' />
