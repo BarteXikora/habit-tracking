@@ -65,7 +65,7 @@ input:focus,
   background-color: #F8FCFF;
   -webkit-box-shadow: 0 0 0 4px #9087FE !important;
           box-shadow: 0 0 0 4px #9087FE !important;
-  border-radius: 4px;
+  border-radius: 0;
 }
 input::-webkit-input-placeholder, .form-control::-webkit-input-placeholder {
   color: #577082;
@@ -124,7 +124,7 @@ input::placeholder,
 
 .dropdown-menu {
   border: 0;
-  border-radius: 4px;
+  border-radius: 0;
   background-color: #E7F3FC;
 }
 
@@ -140,7 +140,7 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-radius: 4px;
+  border-radius: 0;
 }
 .btn img {
   width: 40px;
