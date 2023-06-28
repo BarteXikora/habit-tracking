@@ -28,6 +28,26 @@ h3 {
   font-size: 18px;
 }
 
+.f-default {
+  font-size: 14px;
+}
+
+.f-title {
+  font-size: 30px;
+}
+
+.f-subtitle {
+  font-size: 24px;
+}
+
+.f-big {
+  font-size: 18px;
+}
+
+.f-small {
+  font-size: 12px;
+}
+
 input,
 .form-control {
   border-radius: 0;
@@ -135,6 +155,34 @@ button {
 }
 .btn-prim:active {
   background-color: #200064 !important;
+}
+
+.btn-white {
+  background-color: #F8FCFF;
+  color: #0E0025;
+  font-weight: bold;
+}
+.btn-white:hover {
+  background-color: #C8D1FF;
+  color: #0E0025;
+}
+.btn-white:active {
+  background-color: #9087FE !important;
+  color: #0E0025 !important;
+}
+
+.btn-warn {
+  background-color: #FFC700;
+  color: #0E0025;
+  font-weight: bold;
+}
+.btn-warn:hover {
+  background-color: #ECAA00;
+  color: #0E0025;
+}
+.btn-warn:active {
+  background-color: #C16800 !important;
+  color: #0E0025 !important;
 }
 
 .btn-wrong {
