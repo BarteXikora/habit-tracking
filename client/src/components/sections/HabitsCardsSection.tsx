@@ -1,9 +1,14 @@
 import { useState, useEffect } from 'react'
-import { Row, Col } from 'react-bootstrap'
+import { Row, Col, Button } from 'react-bootstrap'
+import { useNavigate } from 'react-router-dom'
 import HabitCard from './habits/HabitCard'
 import { useAppSelector } from '../../functions/reduxStore'
 
+import iconAdd from '../../img/icon-add-white.svg'
+
 const HabitsCardsSection = () => {
+    const navigate = useNavigate()
+
     const habitsList = useAppSelector(state => state.habits)
 
     const countLeft = (): number => {
@@ -35,6 +40,14 @@ const HabitsCardsSection = () => {
                 return <HabitCard key={habit.id} habit={habit} />
             })
         }
+
+        <Col className='text-end text-sm-center text-md-start'>
+            <Button className='btn btn-prim btn-icon-text d-inline-block' onClick={() => navigate('/add')}>
+                <img src={iconAdd} alt="Dodaj" />
+
+                Dodaj nowy nawyk
+            </Button>
+        </Col>
     </Row>
 }
 
