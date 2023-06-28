@@ -1,0 +1,44 @@
+.app-header {
+    position: relative;
+    background: url('../img/img-header.png');
+    background-size: cover;
+    background-position: center;
+    color: $white;
+
+    .app-header-courtain {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $courtain-prim;
+    }
+}
+
+.title-left-habits {
+    background-color: $good-5;
+    color: $white;
+    font-weight: bold;
+
+    &.title-left-habits-warn {
+        background-color: $warn-5;
+        color: $wrong-8;
+    }
+}
+
+.habit-card-warn {
+    border-bottom: 8px solid $warn-5;
+}
+
+.habit-card-good {
+    border-bottom: 8px solid $good-5;
+}
+
+.habit-card-wrong {
+    border-bottom: 8px solid $wrong-5;
+}
+
+.habit-card-gray {
+    border-bottom: 8px solid $gray-5;
+}

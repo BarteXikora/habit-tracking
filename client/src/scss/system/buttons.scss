@@ -75,3 +75,35 @@ button {
     top: 30px;
     right: -80px;
 }
+
+.btn-option {
+    background-color: $white;
+
+    &:hover {
+        background-color: $gray-4;
+    }
+
+    &:active {
+        background-color: $gray-5 !important;
+    }
+
+    &.btn-option-done {
+        &:hover {
+            background-color: $good-4;
+        }
+
+        &:active {
+            background-color: $good-6 !important;
+        }
+    }
+
+    &.btn-option-not-done {
+        &:hover {
+            background-color: $wrong-4;
+        }
+
+        &:active {
+            background-color: $wrong-6 !important;
+        }
+    }
+}

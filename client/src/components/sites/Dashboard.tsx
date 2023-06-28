@@ -1,6 +1,7 @@
 import { Container, Row, Col } from 'react-bootstrap'
 
-import Header from '../decorations/Header'
+import Header from '../sections/Header'
+import HabitsCardsSection from '../sections/HabitsCardsSection'
 
 const Dashboard = () => {
     return <Container fluid>
@@ -9,6 +10,8 @@ const Dashboard = () => {
                 <Header />
             </Col>
         </Row>
+
+        <HabitsCardsSection />
     </Container>
 }
 
