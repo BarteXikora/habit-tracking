@@ -13,27 +13,29 @@ const SelectOption = ({ habit }: IHabitCard) => {
     return <>
         <span className="fw-bold d-block mb-2">Dostępne oznaczenia:</span>
 
-        {
-            habit.options.length > 0 ?
+        <div className="text-end text-sm-start">
+            {
+                habit.options.length > 0 ?
 
-                habit.options.map(option => {
-                    return <Button
-                        className={`btn btn-option btn-option-${option} p-2 d-inline-block me-2 mb-1`}
-                    >
-                        <img
-                            src={
-                                option === 'done' ? iconDone : option === 'not-done' ? iconNotDone : iconNotApplicable
-                            }
-                            alt=""
-                            onClick={() => dispatch(selectOption({ id: habit.id, option }))}
-                        />
-                    </Button>
-                })
+                    habit.options.map(option => {
+                        return <Button
+                            className={`btn btn-option btn-option-${option} p-2 d-inline-block me-2 mb-1`}
+                        >
+                            <img
+                                src={
+                                    option === 'done' ? iconDone : option === 'not-done' ? iconNotDone : iconNotApplicable
+                                }
+                                alt=""
+                                onClick={() => dispatch(selectOption({ id: habit.id, option }))}
+                            />
+                        </Button>
+                    })
 
-                :
+                    :
 
-                <>Brak dostępnych opcji</>
-        }
+                    <>Brak dostępnych opcji</>
+            }
+        </div>
     </>
 }
 

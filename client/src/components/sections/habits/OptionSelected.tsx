@@ -58,7 +58,7 @@ const OptionSelected = ({ habit }: IHabitCard) => {
 
                 :
 
-                <>
+                <div className='text-end text-md-start'>
                     <FormControl
                         placeholder='Możesz dodać notatkę...'
                         className='mt-3'
@@ -68,13 +68,13 @@ const OptionSelected = ({ habit }: IHabitCard) => {
 
                     {
                         note.length > 0 && <Button
-                            className="btn btn-prim mt-2"
+                            className="btn btn-prim mt-2 d-inline-block"
                             onClick={() => dispatch(addNote({ id: habit.id, note }))}
                         >
                             Dodaj notatkę!
                         </Button>
                     }
-                </>
+                </div>
         }
     </>
 }

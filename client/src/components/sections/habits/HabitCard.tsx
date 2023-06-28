@@ -10,7 +10,7 @@ export interface IHabitCard {
 }
 
 const HabitCard = ({ habit }: IHabitCard) => {
-    return <Col md={4} className='d-grid px-2 pb-4'>
+    return <Col md={6} xl={4} className='d-grid px-2 pb-4'>
         <div className={`
             habit-card-${habit.selectedOption ?
 
