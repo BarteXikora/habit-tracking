@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 import { Button } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
 
@@ -7,6 +8,7 @@ import iconDone from '../../img/icon-done-white.svg'
 
 import moment from 'moment'
 import 'moment/locale/pl'
+import { useAppSelector } from '../../functions/reduxStore'
 
 const Header = () => {
     const date: string = moment().format('dddd, D MMMM')
@@ -14,11 +16,18 @@ const Header = () => {
 
     const navigate = useNavigate()
 
+    const getAnyLeft: boolean = useAppSelector(state => state.habits.filter(current => !current.selectedOption).length) > 0
+
+    const [anyLeft, setAnyLeft] = useState<boolean>(getAnyLeft)
+    useEffect(() => {
+        setAnyLeft(getAnyLeft)
+    }, [getAnyLeft])
+
     return <div className='app-header p-5 text-center text-md-start'>
         <div className="py-3">
             <h1 className='py-2 m-0'>{formatedDate}</h1>
 
-            <div className="d-flex mt-3">
+            <div className={`${anyLeft ? 'd-flex' : 'd-none'} mt-3`}>
                 <Button
                     className='btn btn-white btn-icon-text me-3 mb-1'
                     onClick={() => navigate('/step-by-step')}
@@ -35,7 +44,7 @@ const Header = () => {
                 </Button> */}
             </div>
 
-            <div className="__d-flex d-none align-items-center">
+            <div className={`${!anyLeft ? 'd-flex' : 'd-none'} align-items-center`}>
                 <img src={iconDone} alt="Wszystko gotowe!" className='me-2 mb-1' />
 
                 <span className='fw-bold f-big'>Wszystko gotowe!</span>
