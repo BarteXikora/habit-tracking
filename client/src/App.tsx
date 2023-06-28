@@ -31,6 +31,9 @@ const App = () => {
         {/* Dashboard page: */}
         <Route path='/dashboard' element={<Dashboard />} />
 
+        {/* Step by step page: */}
+        <Route path='/step-by-step' element={<Dashboard />} />
+
         {/* Handles 404: */}
         <Route path='*' element={<Page404 />} />
       </Route>
