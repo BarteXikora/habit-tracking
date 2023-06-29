@@ -7,7 +7,7 @@ export interface User {
 }
 
 const initialState: User = {
-    isLoggedIn: false,
+    isLoggedIn: true,
     name: 'Dev',
     email: 'dev@dev.dev'
 }

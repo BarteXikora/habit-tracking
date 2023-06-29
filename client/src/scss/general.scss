@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: $white;
+    color: $black;
+    font-family: $font-default;
+    font-size: $f-default;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: $font-title;
+}
+
+h1 {
+    font-size: $f-title;
+}
+
+h2 {
+    font-size: $f-subtitle;
+}
+
+h3 {
+    font-size: $f-big;
+}
+
+.f-default {
+    font-size: $f-default;
+}
+
+.f-title {
+    font-size: $f-title;
+}
+
+.f-subtitle {
+    font-size: $f-subtitle;
+}
+
+.f-big {
+    font-size: $f-big;
+}
+
+.f-small {
+    font-size: $f-small;
+}
+
+input,
+.form-control {
+    border-radius: 0;
+    background-color: $white;
+    border: none;
+    transition: $transition;
+
+    &:hover {
+        background-color: $prim-2;
+    }
+
+    &:focus {
+        background-color: $white;
+        box-shadow: 0 0 0 4px $prim-3 !important;
+        border-radius: $radius;
+    }
+
+    &::placeholder {
+        color: $gray-5;
+    }
+}
+
+.section-gray-3 {
+    background-color: $gray-3;
+    color: $black;
+}
+
+.font-good {
+    color: $good-5;
+}
+
+.font-wrong {
+    color: $wrong-5;
+}
+
+.font-gray {
+    color: $gray-5;
+}

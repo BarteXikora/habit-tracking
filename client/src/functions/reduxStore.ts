@@ -2,11 +2,15 @@ import { configureStore } from '@reduxjs/toolkit'
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux'
 
 import userReducer from '../features/user'
+import menuReducer from '../features/menu'
+import habitsReducer from '../features/habits'
 
 // App redux store:
 const store = configureStore({
     reducer: {
-        user: userReducer
+        user: userReducer,
+        menu: menuReducer,
+        habits: habitsReducer
     }
 })
 

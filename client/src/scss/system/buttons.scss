@@ -1,0 +1,141 @@
+.btn,
+button {
+    border: none;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    border-radius: $radius;
+
+    img {
+        width: 40px;
+    }
+}
+
+.btn-prim {
+    background-color: $prim-4;
+    color: $white;
+
+    &:hover {
+        background-color: $prim-6;
+    }
+
+    &:active {
+        background-color: $prim-8 !important;
+    }
+}
+
+.btn-white {
+    background-color: $white;
+    color: $black;
+    font-weight: bold;
+
+    &:hover {
+        background-color: $prim-2;
+        color: $black;
+    }
+
+    &:active {
+        background-color: $prim-3 !important;
+        color: $black !important;
+    }
+}
+
+.btn-warn {
+    background-color: $warn-5;
+    color: $black;
+    font-weight: bold;
+
+    &:hover {
+        background-color: $warn-6;
+        color: $black;
+    }
+
+    &:active {
+        background-color: $warn-7 !important;
+        color: $black !important;
+    }
+}
+
+.btn-wrong {
+    background-color: $wrong-5;
+    color: $black;
+
+    &:hover {
+        background-color: $wrong-4;
+    }
+
+    &:active {
+        background-color: $wrong-3 !important;
+    }
+}
+
+.btn-icon-text {
+    img {
+        margin-right: 10px;
+    }
+}
+
+.btn-tr {
+    background-color: transparent;
+    color: $black;
+
+    &:hover {
+        background-color: $prim-2;
+        color: $black;
+    }
+
+    &:active {
+        background-color: $prim-3 !important;
+        color: $black !important;
+    }
+}
+
+.btn-active {
+    background-color: $prim-2;
+
+    &:hover,
+    &:active {
+        background-color: $prim-2 !important;
+        cursor: default;
+    }
+}
+
+.btn-close-menu {
+    position: absolute;
+    top: 30px;
+    right: -80px;
+}
+
+.btn-option {
+    background-color: $white;
+
+    &:hover {
+        background-color: $gray-4;
+    }
+
+    &:active {
+        background-color: $gray-5 !important;
+    }
+
+    &.btn-option-done {
+        &:hover {
+            background-color: $good-4;
+        }
+
+        &:active {
+            background-color: $good-6 !important;
+        }
+    }
+
+    &.btn-option-not-done {
+        &:hover {
+            background-color: $wrong-4;
+        }
+
+        &:active {
+            background-color: $wrong-6 !important;
+        }
+    }
+}
