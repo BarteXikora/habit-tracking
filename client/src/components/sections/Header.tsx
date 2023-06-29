@@ -27,9 +27,9 @@ const Header = () => {
         <div className="py-3">
             <h1 className='py-2 m-0'>{formatedDate}</h1>
 
-            <div className={`${anyLeft ? 'd-flex' : 'd-none'} mt-3`}>
+            <div className={`${anyLeft ? 'd-flex' : 'd-none'} mt-3 justify-content-center justify-content-md-start`}>
                 <Button
-                    className='btn btn-white btn-icon-text me-3 mb-1'
+                    className='btn btn-white btn-icon-text me-3 mb-1 '
                     onClick={() => navigate('/step-by-step')}
                 >
                     <img src={iconStepByStep} alt="Przejdź do uzupełniania dnia" />
