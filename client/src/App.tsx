@@ -3,6 +3,7 @@ import ProtectedRoutes from './functions/ProtectedRoutes'
 
 import LoginPage from './components/sites/LoginPage'
 import Dashboard from './components/sites/Dashboard'
+import StepByStep from './components/sites/StepByStep'
 import Page404 from './components/sites/Page404'
 
 import { Provider } from 'react-redux'
@@ -30,6 +31,9 @@ const App = () => {
 
         {/* Dashboard page: */}
         <Route path='/dashboard' element={<Dashboard />} />
+
+        {/* Step by step page: */}
+        <Route path='/step-by-step' element={<StepByStep />} />
 
         {/* Handles 404: */}
         <Route path='*' element={<Page404 />} />
